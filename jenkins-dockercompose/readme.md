@@ -20,7 +20,7 @@ EOF
 * Try a pipeline:
 ```json
 pipeline {
-    agent worker  // Uses any available Jenkins agent
+    agent any  // Uses any available Jenkins agent
     stages {
         stage('first stage') {
             steps {
