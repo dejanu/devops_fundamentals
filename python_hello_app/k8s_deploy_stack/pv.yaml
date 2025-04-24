@@ -8,5 +8,6 @@ spec:
     storage: 1Gi
   accessModes:
     - ReadWriteOnce
+  storageClassName: "hostpath" # Ensure this matches the PVC's storageClassName
   hostPath:
     path: /tmp/redis-data  # Change this to an appropriate path on your host

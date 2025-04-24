@@ -9,4 +9,4 @@ spec:
   resources:
     requests:
       storage: 1Gi
-  storageClassName: hostpath  # Specify the storage class: kubectl get sc
+  storageClassName: "hostpath" # Ensure this matches the PV's storageClassName
