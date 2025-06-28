@@ -1,5 +1,6 @@
 # course_materials
-Materials for training and for **container-to-pod** masterclass (Container to Pod: A 1-Hour Expedition)
+Materials for training and **container-to-pod** masterclass (Container to Pod: A 1-Hour Expedition)
+Kanban board [here](https://github.com/users/dejanu/projects/4)
 
 ## First app
 * A minimal [Flask](https://flask.palletsprojects.com/en/3.0.x/quickstart/#a-minimal-application) + Redis (can be used as a database/cache/streaming-engine/message broker) [docs here](https://github.com/dejanu/course_materials/tree/main/python_hello_app).
@@ -18,8 +19,7 @@ Materials for training and for **container-to-pod** masterclass (Container to Po
 * Gist Docker 101 👉 [here](https://gist.github.com/dejanu/a7d4ad6340c5eae5130a964b592f3b75)
 * [Ops Jargon](https://gist.github.com/dejanu/a761175e9972d689421cbf435bf98223) -  jargon refers to words/expressions that are used in special or technical ways by particular groups of people...OPS
  
-## Articles
-### WIP
+## Articles [WIP...]
 
 * [Path to observability: Prometheus|Kubernetes](https://www.linkedin.com/pulse/path-observability-prometheuskubernetes-alexandru-dejanu-ufz8c/)
 
