@@ -1,5 +1,7 @@
-# course_materials
+## course_materials
+
 Materials for training and **container-to-pod** masterclass (Container to Pod: A 1-Hour Expedition)
+
 Kanban board [here](https://github.com/users/dejanu/projects/4)
 
 ## First app
