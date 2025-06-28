@@ -15,7 +15,7 @@ Materials for training and for **container-to-pod** masterclass (Container to Po
 ## Usefull links
 
 * Gist with K8S upgrade steps 👉 [here](https://gist.github.com/dejanu/89ec2565d3a923a368f5dc046259e2b9)
-* Gist Docker CLI flags 👉 [here](https://gist.github.com/dejanu/12a44a086d9eed02f8770281d12de925)
+* Gist Docker 101 👉 [here](https://gist.github.com/dejanu/a7d4ad6340c5eae5130a964b592f3b75)
 * [Ops Jargon](https://gist.github.com/dejanu/a761175e9972d689421cbf435bf98223) -  jargon refers to words/expressions that are used in special or technical ways by particular groups of people...OPS
  
 ## Articles
