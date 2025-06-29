@@ -73,5 +73,3 @@ jobs:
         tags:
           dejanualex/pythonhello:${{ env.IMAGE_TAG }}
           # docker.io/dejanualex/pythonhello:${{ env.IMAGE_TAG }}
-
-        # tags: dejanualex/pythonhello:1.0
