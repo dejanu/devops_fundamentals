@@ -7,6 +7,9 @@ python app.py
 export FLASK_APP=main.py
 export FLASK_RUN_PORT=5555
 flask run
+
+# start app as standalone container (without redis)
+docker run -p 5555:5000 dejanualex/pythonhello:1.0
 ```
 # Test app:
 
