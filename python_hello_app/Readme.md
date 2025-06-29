@@ -20,7 +20,7 @@ pylint $(git ls-files '*.py')
 # Build flask app:
 
 ```bash
-docker build -t dejanualex/flaskapp:1.0 .
+docker build -t dejanualex/pythonhello:1.0 .
 ```
 
 # Compose flask-app and redis
@@ -47,5 +47,5 @@ kubectl expose deploy flask-app --name=flask-svc --type="LoadBalancer" --port=55
 
 ### ToDos
 
-* Create a Dockerfile (explore [hadoling] linter: `docker run --rm -i hadolint/hadolint < Dockerfile`)
+* Explore Dockerfile (explore [hadoling](https://github.com/hadolint/hadolint) linter: `docker run --rm -i hadolint/hadolint < Dockerfile`)
 * Build and push the image to [docker registry](https://hub.docker.com/) (explore a scanner like [trivy](https://github.com/aquasecurity/trivy))
