@@ -9,16 +9,29 @@ from redis import Redis
 redis_host = os.getenv('REDIS_HOST', 'redis') # localhost for local testing
 redis_port = int(os.getenv('REDIS_PORT', '6379'))
 
-redis = Redis(host=redis_host, port=redis_port)
+try:
+    redis = Redis(host=redis_host, port=redis_port)
+    # https://redis.io/docs/latest/commands/ping/, test connection
+    redis.ping()
+except Exception as e:
+    redis = None
+    print(f"Warning: Redis connection failed. Exception: {e}")
+
 app = Flask(__name__)
 
 @app.route('/')
 def index():
     """Count and display no of page hits"""
-    # inc the value of key by amount, if no key exists, the value will be initialized
-    redis.incr('hits')
-    counter =  str(redis.get('hits'),'utf-8')
-    return f'<br> <center><p><b>🗳️ View no :{counter}</b></p></center>'
+    if redis:
+        try:
+            # inc the value of key by amount, if no key exists, the value will be initialized
+            redis.incr('hits')
+            counter = str(redis.get('hits'), 'utf-8')
+            return f'<br> <center><p><b>🗳️ View no :{counter}</b></p></center>'
+        except Exception as e:
+            return f'<br> <center><p><b>Redis error: {e}</b></p></center>', 500
+    else:
+        return '<br> <center><p><b>Redis is unavailable. Please check the connection.</b></p></center>', 500
 
 @app.route('/test',methods=['GET'])
 def test():
