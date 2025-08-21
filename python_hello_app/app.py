@@ -9,6 +9,10 @@ from redis import Redis
 redis_host = os.getenv('REDIS_HOST', 'redis') # localhost for local testing
 redis_port = int(os.getenv('REDIS_PORT', '6379'))
 
+# Get secret from environment variable, default to 'secret_default_value' if not set
+my_secret = os.getenv('MY_SECRET', 'secret_default_value')
+print(f"Application secret: {my_secret}")
+
 try:
     redis = Redis(host=redis_host, port=redis_port)
     # https://redis.io/docs/latest/commands/ping/, test connection

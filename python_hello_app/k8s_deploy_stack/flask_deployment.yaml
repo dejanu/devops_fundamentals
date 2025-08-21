@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: flask-app
-          image: dejanualex/flaskapp:1.0
+          image: dejanualex/flaskapp:1.1
           ports:
             - containerPort: 5000
           env:
@@ -23,3 +23,8 @@ spec:
               value: "redis"  # This should match the name of the Redis service
             - name: REDIS_PORT
               value: "6379"
+            - name: MY_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: python-hello-app-secret
+                  key: testsecret

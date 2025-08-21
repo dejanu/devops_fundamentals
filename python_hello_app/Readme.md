@@ -44,6 +44,11 @@ docker-compose down --rmi all --volumes --remove-orphans
 
 ```bash
 kubectl apply -f k8s_deploy_stack
+
+# check the secret value
+kubectl get secrets python-hello-app-secret -ojsonpath={.data.testsecret} | base64 -d
+
+# check counter
 kubectl expose deploy flask-app --name=flask-svc --type="LoadBalancer" --port=5555 --target-port=5000
 ```
 
