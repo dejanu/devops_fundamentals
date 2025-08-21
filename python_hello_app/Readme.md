@@ -45,6 +45,8 @@ docker-compose down --rmi all --volumes --remove-orphans
 ```bash
 kubectl apply -f k8s_deploy_stack
 
+# dummy create secret
+kubectl create secret generic python-hello-app-secret --from-literal=testsecret=dummyvalue
 # check the secret value
 kubectl get secrets python-hello-app-secret -ojsonpath={.data.testsecret} | base64 -d
 
