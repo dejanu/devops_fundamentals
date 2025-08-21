@@ -161,3 +161,5 @@ solution/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
+# Secret file
+python_hello_app/k8s_deploy_stack/secret.yaml
