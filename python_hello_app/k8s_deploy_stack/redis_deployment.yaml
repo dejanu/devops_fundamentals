@@ -25,3 +25,31 @@ spec:
         - name: redis-storage
           persistentVolumeClaim:
             claimName: redis-pvc  # This should match the name of your PVC
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: redis-pvc
+  namespace: default
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: "hostpath" # Ensure this matches the PV's storageClassName
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: redis-pv
+  namespace: default
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: "hostpath" # Ensure this matches the PVC's storageClassName
+  hostPath:
+    path: /tmp/redis-data  # Change this to an appropriate path on your host
+  

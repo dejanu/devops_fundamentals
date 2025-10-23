@@ -13,7 +13,7 @@ services:
   python-app:
     #build:
     #  context: .
-    image: 'dejanualex/pythonhello:${TAG}'
+    image: 'dejanualex/pythonredis:${TAG}'
     container_name: flask-app
     depends_on:
       - redis

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: flask-app
-          image: dejanualex/flaskapp:1.1
+          image: dejanualex/pythonredis:1.0
           ports:
             - containerPort: 5000
           env:
