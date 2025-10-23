@@ -1,7 +1,7 @@
 {{/*
 Expand the name of the chart.
 */}}
-{{- define "demochart.name" -}}
+{{- define "pythonhello.name" -}}
 {{- default .Chart.Name .Values.nameOverride | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
@@ -10,7 +10,7 @@ Create a default fully qualified app name.
 We truncate at 63 chars because some Kubernetes name fields are limited to this (by the DNS naming spec).
 If release name contains chart name it will be used as a full name.
 */}}
-{{- define "demochart.fullname" -}}
+{{- define "pythonhello.fullname" -}}
 {{- if .Values.fullnameOverride }}
 {{- .Values.fullnameOverride | trunc 63 | trimSuffix "-" }}
 {{- else }}
@@ -26,16 +26,16 @@ If release name contains chart name it will be used as a full name.
 {{/*
 Create chart name and version as used by the chart label.
 */}}
-{{- define "demochart.chart" -}}
+{{- define "pythonhello.chart" -}}
 {{- printf "%s-%s" .Chart.Name .Chart.Version | replace "+" "_" | trunc 63 | trimSuffix "-" }}
 {{- end }}
 
 {{/*
 Common labels
 */}}
-{{- define "demochart.labels" -}}
-helm.sh/chart: {{ include "demochart.chart" . }}
-{{ include "demochart.selectorLabels" . }}
+{{- define "pythonhello.labels" -}}
+helm.sh/chart: {{ include "pythonhello.chart" . }}
+{{ include "pythonhello.selectorLabels" . }}
 {{- if .Chart.AppVersion }}
 app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
 {{- end }}
@@ -45,17 +45,17 @@ app.kubernetes.io/managed-by: {{ .Release.Service }}
 {{/*
 Selector labels
 */}}
-{{- define "demochart.selectorLabels" -}}
-app.kubernetes.io/name: {{ include "demochart.name" . }}
+{{- define "pythonhello.selectorLabels" -}}
+app.kubernetes.io/name: {{ include "pythonhello.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 {{- end }}
 
 {{/*
 Create the name of the service account to use
 */}}
-{{- define "demochart.serviceAccountName" -}}
+{{- define "pythonhello.serviceAccountName" -}}
 {{- if .Values.serviceAccount.create }}
-{{- default (include "demochart.fullname" .) .Values.serviceAccount.name }}
+{{- default (include "pythonhello.fullname" .) .Values.serviceAccount.name }}
 {{- else }}
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}

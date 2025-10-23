@@ -52,7 +52,15 @@ kubectl expose deploy flask-app --name=flask-svc --type="LoadBalancer" --port=55
 
 # Helm chart
 
-* [here](https://github.com/dejanu/course_materials/blob/main/python_hello_app/helm_chart/readme.md)
+```bash
+cd helm_chart
+helm create pythonhello
+
+helm template flaskhello pythonhello
+helm install flaskhello pythonhello 
+
+helm uninstall flaskhello  
+```
 
 ### ToDos
 
