@@ -5,6 +5,7 @@ Materials for training and **container-to-pod** masterclass (Container to Pod: A
 Kanban board [here](https://github.com/users/dejanu/projects/4)
 
 ## First app
+
 * A minimal [Flask](https://flask.palletsprojects.com/en/3.0.x/quickstart/#a-minimal-application) + Redis (can be used as a database/cache/streaming-engine/message broker) [docs here](https://github.com/dejanu/course_materials/tree/main/python_hello_app).
 
 ## Jenkins local setup
@@ -36,11 +37,11 @@ Kanban board [here](https://github.com/users/dejanu/projects/4)
 * Masterclass workshop:
 
 ```bash
-curl https://raw.githubusercontent.com/dejanu/course_materials/main/masterclass_slides.key -o masterclass_slides.key
+curl https://raw.githubusercontent.com/dejanu/course_materials/main/sessions/masterclass_slides.key -o masterclass_slides.key
 ```
 
 * K8S_training:
 
 ```bash
-curl https://raw.githubusercontent.com/dejanu/course_materials/main/k8s_trainning.key -o k8s_trainning.key
+curl https://raw.githubusercontent.com/dejanu/course_materials/main/sessions/k8s_training.key -o k8s_training.key
 ```
