@@ -116,3 +116,6 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+secret:
+  testsecret: "myplaintextsecret" # Replace with your secret value

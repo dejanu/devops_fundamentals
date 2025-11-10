@@ -41,4 +41,17 @@ spec:
           {{- if .Values.env }}
           env:
             {{- toYaml .Values.env | nindent 12 }}
+            - name: REDIS_HOST
+              value: "redis"  # This should match the name of the Redis service
+            - name: REDIS_PORT
+              value: "6379"
+            - name: MY_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: python-hello-app-secret
+                  key: testsecret
           {{- end }}
+      {{- with .Values.volumes }}
+      volumes:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}

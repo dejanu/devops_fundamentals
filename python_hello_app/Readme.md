@@ -60,6 +60,8 @@ helm template flaskhello pythonhello
 helm install flaskhello pythonhello 
 
 helm uninstall flaskhello  
+
+kubectl expose deploy flaskhello-pythonhello --name=flask-svc --type="LoadBalancer" --port=5555 --target-port=5000
 ```
 
 ### ToDos

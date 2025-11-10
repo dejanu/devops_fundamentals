@@ -33,7 +33,14 @@ Kanban board [here](https://github.com/users/dejanu/projects/4)
 
 ## Slides
 
-* Save slides on local
+* Masterclass workshop:
+
 ```bash
 curl https://raw.githubusercontent.com/dejanu/course_materials/main/masterclass_slides.key -o masterclass_slides.key
+```
+
+* K8S_training:
+
+```bash
+curl https://raw.githubusercontent.com/dejanu/course_materials/main/k8s_trainning.key -o k8s_trainning.key
 ```
