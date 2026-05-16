@@ -37,9 +37,9 @@ Nice video [Linus Torvalds & git](https://www.youtube.com/watch?v=idLyobOhtO4)
 
 ```bash
 # add to stage aka create a blob
-git add ...
+git add <file_name>
 
-# check blobs
+# list all objects (blobs, trees, commits) in the repo
 git rev-list --objects --all
 git log --oneline
 ```
@@ -47,7 +47,7 @@ git log --oneline
 
 ```bash
 # commit or snapshot aka create tree object
-git commit -m 'mesage here'
+git commit -m 'message here'
 
 # send changes to remote repo
 git push
