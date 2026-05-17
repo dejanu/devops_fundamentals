@@ -87,8 +87,8 @@ git commit --amend -m 'new commit message'
 
 ```bash
 # MERGE your changes from feat/git to main: this will create a new commit on main with the combined changes from both branches
-git checkout main
-git merge feat/git # keep original commits from feat/git intact
+git checkout -b feat/git # create and switch to feat/git branch
+git merge main # this will merge the changes from main into feat/git, creating a new commit on feat/git with the combined changes from both branches
 
 # REBASE your changes from feat/git to main: this will move the commits from feat/git on top of main, creating a cleaner history but rewriting commit hashes
 git checkout feat/git
