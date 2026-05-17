@@ -39,7 +39,7 @@ Nice video [Linus Torvalds & git](https://www.youtube.com/watch?v=idLyobOhtO4)
 # add to stage aka create a blob
 git add <file_name>
 
-# list all objects (blobs, trees, commits) in the repo
+# list all objects (commits, trees, blobs) in the repo
 git rev-list --objects --all
 git log --oneline
 ```
@@ -66,7 +66,7 @@ git reset --soft HEAD~2 # last 2 commits
 git reset --hard HEAD~1
 
 # public undo commit aka rewrite history aka add new commits to reverse the effect of some earlier commits
-git revert <commit_sha>
+git revert HEAD # revert last commit
 
 # revert last 2 commits
 git revert HEAD~2..HEAD
@@ -83,11 +83,14 @@ git commit --amend # interactive
 git commit --amend -m 'new commit message'
 ```
 
-* Bring changes to your branch
+* Integrate changes from one branch to another: there are 2 main ways to do this, MERge and REBASE
 
 ```bash
-# bring feat/git to main
+# MERGE your changes from feat/git to main: this will create a new commit on main with the combined changes from both branches
 git checkout main
 git merge feat/git # keep original commits from feat/git intact
-git rebase feat/git # rewrite commit history
+
+# REBASE your changes from feat/git to main: this will move the commits from feat/git on top of main, creating a cleaner history but rewriting commit hashes
+git checkout feat/git
+git rebase main # this will replay the commits from feat/git on top of main, effectively integrating the changes while maintaining a linear history
 ```
