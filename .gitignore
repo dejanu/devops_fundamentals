@@ -163,3 +163,6 @@ solution/
 
 # Secret file
 python_hello_app/k8s_deploy_stack/secret.yaml
+
+# add platformstuff folder to gitignore
+platformstuff/
