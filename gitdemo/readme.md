@@ -16,19 +16,17 @@ Nice video [Linus Torvalds & git](https://www.youtube.com/watch?v=idLyobOhtO4)
 
 **Working tree**: a directory structure that contains all of the project's files.	
 
-**Repository (repo)**: the directory located at the top level of a working tree, hosting all of the project's files along with the version history of these files.
-
-**Clone***: the action of creating a copy of a remote repository on a local machine to work on a project to which you have access.
+**Object**: one of four types of entities available in a repo. These entities include blobs (representing individual files) a tree representing a working tree, a commit (representing a snapshot of specific version of the working tree), and a tag, which is a label/pointer assigned to an individual commit.
 
 **Commit**: a snapshot of the changes made to the files in a repository at a specific point in time. Commits are used to record and save changes.	
+
+**HEAD**: pointer to the last commit on the branch
 
 **Staging area**: an intermediate location (which isn't part of the repository) where changes to files in the working tree are prepared before they're committed. It allows developers to select changes they intend to commit.
 
 **Branch**: a named series of linked commits, represents a distinct version of a project, the most recent commit within a branch is called the head
 
 **Merge**: the process of combining changes from one branch (or commit) into another. This integrates changes from one branch into another 	
-
-**Object**: one of four types of entities available in a repo. These entities include blobs representing individual files, a tree representing a working tree, a commit representing a specific version of the working tree, and a *tag, which is a label assigned to an individual commit.
 
 
 ### Generic flow
