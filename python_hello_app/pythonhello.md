@@ -77,7 +77,8 @@ helm uninstall flaskhello
 kubectl expose deploy flaskhello-pythonhello --name=flask-svc --type="LoadBalancer" --port=5555 --target-port=5000
 ```
 
-### ToDos
+### Workflows
 
-* Explore Dockerfile (explore [hadoling](https://github.com/hadolint/hadolint) linter: `docker run --rm -i hadolint/hadolint < Dockerfile`)
-* Build and push the image to [docker registry](https://hub.docker.com/) (explore a scanner like [trivy](https://github.com/aquasecurity/trivy))
+* Lint Dockerfile ([hadolint](https://github.com/hadolint/hadolint) according to Docker [best practices](https://docs.docker.com/build/building/best-practices/): `docker run --rm -i hadolint/hadolint < Dockerfile`)
+
+* Build workflow triggered on tag push to main branch, pushe to [pythonredis](https://hub.docker.com/repository/docker/dejanualex/pythonredis)

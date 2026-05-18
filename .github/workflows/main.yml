@@ -70,6 +70,5 @@ jobs:
       with:
         context: "{{defaultContext}}:python_hello_app"
         push: true
-        tags:
+        tags: |
           dejanualex/pythonhello:${{ env.IMAGE_TAG }}
-          # docker.io/dejanualex/pythonhello:${{ env.IMAGE_TAG }}
