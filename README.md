@@ -4,7 +4,7 @@ Materials for training and **container-to-pod** masterclass (Container to Pod: A
 
 Kanban board [here](https://github.com/users/dejanu/projects/4)
 
-## First app
+## Python Hello App
 
 * A minimal [Flask](https://flask.palletsprojects.com/en/3.0.x/quickstart/#a-minimal-application) + Redis (can be used as a database/cache/streaming-engine/message broker) [docs here](https://github.com/dejanu/course_materials/tree/main/python_hello_app).
 

@@ -1,3 +1,13 @@
+# Architecture
+
+```mermaid
+graph LR
+    Client["Client (browser / curl)"] -->|HTTP :5000| Flask["Flask App\n(python_hello_app)"]
+    Flask -->|TCP :6379| Redis["Redis\n(cache / counter)"]
+```
+
+---
+
 # Start flask server:
 
 ```bash
@@ -13,6 +23,9 @@ flask run
 docker build -t dejanualex/pythonredis:1.0 .
 docker run -p 5555:5000 dejanualex/pythonredis:1.0
 ```
+
+
+
 # Test app:
 
 ```bash
